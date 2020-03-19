@@ -47,8 +47,7 @@
 
 	</mvc:interceptors>
 	<!-- mvc resource -->
-	<mvc:resources location="file:/jblog-uploads/"
-		mapping="/assets/image/**" />
+	<mvc:resources mapping="/assets/image/**" location="file:/jblog-uploads/"/>
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -77,7 +76,5 @@
 	     <property name="defaultEncoding" value="utf-8" />
 	
 	</bean>
-	<!-- the mvc resources tag does the magic -->
-	<mvc:resources mapping="/upload-image/**" location="file:/upload/" />
 
 </beans>

@@ -32,7 +32,7 @@
 						<th>삭제</th>
 					</tr>
 
-					<c:forEach items='${list}' var='vo' varStatus='status'>                 d x  x
+					<c:forEach items='${list}' var='vo' varStatus='status'>     
 						<tr>
 							<td>${status.index+1 }</td>
 							<td>${vo.name}</td>
