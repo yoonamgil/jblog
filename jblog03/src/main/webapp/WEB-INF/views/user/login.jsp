@@ -25,7 +25,7 @@
 
 
 
-			<input type="text" name="password">
+			<input type="password" name="password">
 			<c:if test="${not empty userVo}">
 				<p>로그인이 실패 했습니다.</p>
 

@@ -16,7 +16,7 @@
 		<![CDATA[
 		insert
 		into blog
-		values (#{id}, '블로그','/image/202021845232568.jpg' )
+		values (#{id}, '블로그','/images/spring-logo.jpg' )
 		]]>
 	</insert>
 	
@@ -36,6 +36,16 @@
 			from user 
 			where id = #{id}
 			and password = #{password}
+		]]>
+	</select>
+	
+	<select id="getUserById" parameterType="string"
+		resultType="uservo">
+		<![CDATA[
+		select *
+			from user 
+			where id = #{id}
+			
 		]]>
 	</select>
 

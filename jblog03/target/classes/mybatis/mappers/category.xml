@@ -12,6 +12,7 @@
 						group by category_no) b
 			on a.no= b.no
             where id = #{id}
+            order by no asc
 			
 			
 		]]>

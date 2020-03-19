@@ -18,6 +18,7 @@
 		select no,title,contents,reg_date as regDate,category_no as categoryNo
 			from post 
 			where category_no = #{min}
+			order by no desc
 			
 			
 		]]>
@@ -26,7 +27,7 @@
 	<select id="findMin" parameterType="long"
 		resultType="Long">
 		<![CDATA[
-		select min(no)
+		select max(no)
 			from post 
 			where category_no = #{min}
 			

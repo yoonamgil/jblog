@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.douzone.jblog.service.BlogService;
+import com.douzone.jblog.service.UserService;
 import com.douzone.jblog.vo.BlogVo;
 import com.douzone.jblog.vo.CategoryVo;
 import com.douzone.jblog.vo.PostVo;
@@ -30,14 +31,23 @@ public class BlogContoroller {
 	@Autowired
 	private BlogService blogService;
 	
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping( {"", "/{pathNo1}", "/{pathNo1}/{pathNo2}" } )
 	public String blogMain(
 			@PathVariable String id,
 			@PathVariable Optional<Long> pathNo1,
 			@PathVariable Optional<Long> pathNo2,
-			ModelMap modelMap 
+			ModelMap modelMap,UserVo userVo
 			) {
+		
+		userVo=userService.getUserById(id);
+		
+		if(userVo==null) {
+			
+			return "error/404";
+		}
 		
 		Long categoryNo = 0L;
 		Long postNo = 0L;

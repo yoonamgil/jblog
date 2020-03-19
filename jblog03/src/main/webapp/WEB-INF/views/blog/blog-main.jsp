@@ -16,9 +16,7 @@
 			<div id="content">
 				<div class="blog-content">
 					<h4>${postVo.title }</h4>
-					<p>
-						 ${postVo.contents }
-					<p>
+					<pre>${postVo.contents }<pre>
 				</div>
 				<ul class="blog-list">
 					<c:forEach items="${postList}" var="vo" varStatus="status">
