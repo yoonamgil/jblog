@@ -16,7 +16,7 @@
 		<![CDATA[
 		insert
 		into blog
-		values (#{id}, '블로그','/images/spring-logo.jpg' )
+		values (#{id}, '블로그','/images/spring-logo.jpg' ) 
 		]]>
 	</insert>
 	
