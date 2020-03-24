@@ -27,7 +27,6 @@ import com.douzone.security.AuthUser;
 @RequestMapping( "/{id:(?!assets).*}" )
 public class BlogContoroller {
 	
-
 	@Autowired
 	private BlogService blogService;
 	

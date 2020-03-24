@@ -1,9 +1,21 @@
 package com.douzone.jblog.vo;
 
-public class UserVo {
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+public class UserVo {
+	
+	@NotEmpty  
+	@Length(min=2, max=15)
 	private String id;
+	
+	@NotEmpty  
+	@Length(min=2, max=15)
 	private String name; 
+	
+	@NotEmpty  
+	@Length(min=2, max=16)
 	private String password;
 	private String regDate;
 	public String getId() {
