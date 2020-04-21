@@ -1,0 +1,24 @@
+
+
+<tr id="deleteTr" data-no='<%= no %>'>
+	<td><%=num%>  </td>
+	<td><%=name%></td>
+	<td><%=postCount %></td>
+	<td><%=description%></td>
+	<td >
+	<%
+  	 	if(postCount == 0){
+  	 	
+	%>	
+
+		
+		<a href="" data-no='<%= no %>' >
+		<img src="<%=contextPath%>/assets/images/delete.jpg"></a>
+		
+		</a>
+											
+	<%
+  	 }
+	%>
+	</td>
+</tr>

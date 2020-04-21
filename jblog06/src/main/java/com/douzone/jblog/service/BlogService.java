@@ -151,4 +151,9 @@ public class BlogService {
 		
 		return map;
 	}
+
+	public List<CategoryVo> getCategoryList(String id) {
+		
+		return categoryRepository.findList(id);
+	}
 }
